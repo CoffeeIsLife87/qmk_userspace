@@ -207,7 +207,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             #endif // TURBO_ENABLE
 
             #ifdef NUMBERPAD_ENABLE
-            else if ((KC == KC_NUM) && (num_lock_on)) {
+            else if ((KC == KC_NUM) && (!num_lock_on)) {
                 RGB_MATRIX_INDICATOR_SET_COLOR(pos, DimmedMax, DimmedMax, DimmedMax);
             }
             #endif // NUMBERPAD_ENABLE
